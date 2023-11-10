@@ -18,6 +18,11 @@ export type ProductsCreatorType = {
   ativo: boolean;
 };
 
+export type LoginType = {
+  username: string;
+  password: string;
+};
+
 export enum Selectors {
   Male = "Masculino",
   Female = "Feminino",

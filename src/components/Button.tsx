@@ -7,7 +7,7 @@ interface ButtonProps {
 
 export const Button = (props: React.PropsWithChildren<ButtonProps>) => {
   return (
-    <button
+    <div
       className={twMerge(
         "flex justify-center items-center font-bold text-md response:text-lg p-4",
         "ease-in-out duration-200 select-none active:duration-100",
@@ -17,6 +17,6 @@ export const Button = (props: React.PropsWithChildren<ButtonProps>) => {
       onClick={props.onClick}
     >
       {props.children}
-    </button>
+    </div>
   );
 };

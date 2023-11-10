@@ -2,6 +2,7 @@ import { twMerge } from "tailwind-merge";
 import { Button } from "../components/Button";
 import { Creators } from "@/types/types";
 import { Dispatch, SetStateAction } from "react";
+import { useLogin } from "@/context/LoginContext";
 
 interface DashboardSelectInterface {
   creatorSelect: Creators | null;
@@ -9,10 +10,11 @@ interface DashboardSelectInterface {
 }
 
 export default function DashboardSelect(props: DashboardSelectInterface) {
+  const { login } = useLogin();
   return (
     <div className="flex flex-col gap-10 items-center m-auto">
       <h1 className="text-white text-2xl response:text-3xl font-bold select-none">
-        Olá *USUÁRIO*, escolha o que deseja fazer!
+        Olá {login.username}, escolha o que deseja fazer!
       </h1>
       <div className="flex w-full justify-around">
         <Button
