@@ -50,6 +50,13 @@ export default function CreateProduct(props: CreatorInterface) {
       estoqueMinimo: minimum,
       ativo: active,
     });
+    setName("");
+    setBarsCode("");
+    setCost("");
+    setPrice("");
+    setAmount("0");
+    setMinimum("0");
+    setActive(true);
   };
 
   return (
@@ -63,6 +70,7 @@ export default function CreateProduct(props: CreatorInterface) {
             placeholder="Nome do Produto"
             className={twMerge("w-full rounded-lg text-black p-2 border-4 border-white placeholder:text-gray-700")}
             onChange={(e) => setName(e.target.value)}
+            value={name}
           />
         </div>
         <div className="flex w-full items-center justify-center gap-1">
@@ -72,6 +80,7 @@ export default function CreateProduct(props: CreatorInterface) {
             placeholder="Número do Código de Barras"
             className={twMerge("w-full rounded-lg text-black p-2 border-4 border-white placeholder:text-gray-700")}
             onChange={(e) => setBarsCode(e.target.value)}
+            value={barsCode}
           />
         </div>
 
@@ -103,6 +112,7 @@ export default function CreateProduct(props: CreatorInterface) {
             placeholder="Quantidade em Estoque"
             className={twMerge("w-full rounded-lg text-black p-2 border-4 border-white placeholder:text-gray-700")}
             onChange={(e) => setAmount(e.target.value)}
+            value={amount}
           />
         </div>
         <div className="flex w-full items-center justify-center gap-1">
@@ -112,6 +122,7 @@ export default function CreateProduct(props: CreatorInterface) {
             placeholder="Estoque Mínimo"
             className={twMerge("w-full rounded-lg text-black p-2 border-4 border-white placeholder:text-gray-700")}
             onChange={(e) => setMinimum(e.target.value)}
+            value={minimum}
           />
         </div>
         <div className="flex gap-1 select-none items-center">

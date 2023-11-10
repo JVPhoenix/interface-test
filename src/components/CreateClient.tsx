@@ -36,6 +36,11 @@ export default function CreateClient(props: CreatorInterface) {
       estadoCivil: status,
       genero: gender,
     });
+    setName("");
+    setPhone("");
+    setAdress("");
+    setStatus("Solteiro");
+    setGender(null)
   };
 
   return (
@@ -49,6 +54,7 @@ export default function CreateClient(props: CreatorInterface) {
             placeholder="Nome"
             className={twMerge("w-full rounded-lg text-black p-2 border-4 border-white")}
             onChange={(e) => setName(e.target.value)}
+            value={name}
           />
         </div>
         <div className="flex w-full items-center justify-center gap-1">
@@ -70,6 +76,7 @@ export default function CreateClient(props: CreatorInterface) {
             rows={3}
             className={twMerge("rounded-lg text-black p-2 border-4 border-white")}
             onChange={(e) => setAdress(e.target.value)}
+            value={adress}
           />
         </div>
         <div className="flex items-center w-full gap-2">
